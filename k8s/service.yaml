@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: bav
+  labels:
+    app: frontend
+spec:
+  # The only externally exposed entry point. Use NodePort for a bare cluster, or
+  # front it with an Ingress instead of a LoadBalancer if you prefer.
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80

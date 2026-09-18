@@ -1,0 +1,9 @@
+# Node
+node_modules/
+dist/
+
+# Playwright / test output
+test-results/
+playwright-report/
+
+.DS_Store

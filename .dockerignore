@@ -1,0 +1,11 @@
+# Frontend build context (this repo's root). nginx.conf is kept — it is COPYed
+# into the serve stage.
+.git
+node_modules
+dist
+e2e
+test-results
+playwright-report
+k8s
+**/.cache
+.DS_Store

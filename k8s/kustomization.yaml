@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: bav
+
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml
+
+# Point at your registry + tag, or run:
+#   kustomize edit set image business-app-validator-frontend=<registry>/<name>:<tag>
+images:
+  - name: business-app-validator-frontend
+    newTag: latest
+    # newName: your-registry.example.com/business-app-validator-frontend
